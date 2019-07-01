@@ -1,9 +1,60 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab Two
+      Presencial
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content class="ion-padding">
+  <form class="ion-text-center">
+    <ion-label>Quanto preciso para aprovar?</ion-label>
+    <ion-item>
+      <ion-label position="floating">G1</ion-label>
+      <ion-input
+        type="number"
+        [(ngModel)]="g1_preciso"
+        name="g1_preciso"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button
+      type="submit"
+      style="width: 100%"
+      color="primary"
+      (click)="precisoG2()"
+      >CALCULAR G2</ion-button
+    >
+  </form>
+
+  <div class="ion-padding"></div>
+
+  <form class="ion-text-center">
+    <ion-label>Será que aprovei?</ion-label>
+    <ion-item>
+      <ion-label position="floating">G1</ion-label>
+      <ion-input
+        type="number"
+        [(ngModel)]="g1_passei"
+        name="g1_passei"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">G2</ion-label>
+      <ion-input
+        type="number"
+        [(ngModel)]="g2_passei"
+        name="g2_passei"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button
+      type="submit"
+      style="width: 100%"
+      color="primary"
+      (click)="passeiDisciplina()"
+      >CALCULAR MÉDIA</ion-button
+    >
+  </form>
+</ion-content>
